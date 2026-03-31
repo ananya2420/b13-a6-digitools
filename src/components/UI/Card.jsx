@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import group7 from "../../assets/products/Group 7.png";
 import group8 from "../../assets/products/Group 8.png";
 import group9 from "../../assets/products/Group 9.png";
@@ -16,8 +16,22 @@ const imageMap = {
   "group-12.png": group12,
 };
 
-export const Card = ({ premium }) => {
+export const Card = ({ premium,setCart,cart, setSelectedPremiums,selectedPremiums}) => {
   if (!premium) return null;
+
+  const [isSelected,setIsSelected]=useState(false);
+
+  console.log(premium.price);
+
+  const handleChoosePremium = () =>{
+    
+    setIsSelected(true);
+
+    setCart(prev => [...prev, premium.price]); 
+
+    setSelectedPremiums([...selectedPremiums,premium])
+  }
+  
 
   return (
     <div className="card bg-base-100 shadow-md">
@@ -51,9 +65,13 @@ export const Card = ({ premium }) => {
         </ul>
 
         {/* Button */}
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
+      <button
+  className="btn"
+  onClick={handleChoosePremium}
+  disabled={isSelected}
+>
+  {isSelected ? "Added to cart" : "Buy now"}
+</button>
       </div>
     </div>
   );

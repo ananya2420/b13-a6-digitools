@@ -9,7 +9,7 @@ import PricingSection from './components/PricingSections/PricingSection'
 import Stats from './components/stats/Stats'
 import StepsSection from './components/StepsSection/StepsSection'
 import { Premium } from './components/homepage/Premium/Premium'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 const fetchPremium=async()=>{
   const res=await fetch("/data.json");
@@ -18,15 +18,15 @@ const fetchPremium=async()=>{
 
 function App() {
  const premiumPromise=fetchPremium();
-
+ const [cart, setCart] = useState([]);
  
   return (
     <>
-    <Navbar />
+    <Navbar cart={cart}/>
     <Banner />
     <Stats />
     <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-    <Premium premiumPromise={premiumPromise} />
+    <Premium premiumPromise={premiumPromise} setCart={setCart} cart={cart}/>
     </Suspense>
     <StepsSection />
     <PricingSection />
