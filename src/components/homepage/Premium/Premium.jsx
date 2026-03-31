@@ -1,12 +1,18 @@
 import React, { use } from 'react'
+import { AvailablePremiums } from './AvailablePremiums/AvailablePremiums';
+
 
 export const Premium = ({premiumPromise}) => {
   console.log(premiumPromise);
 
-  const data=use(premiumPromise);
-  console.log(data);
+  const premiums=use(premiumPromise);
+  console.log(premiums);
   return (
-    <div>premium: {data.length}</div>
+    <div className='container mx-auto'>
+      premium: {premiums.length}
+    
+    <AvailablePremiums premiums={premiums} />
+    </div>
   )
 }
 

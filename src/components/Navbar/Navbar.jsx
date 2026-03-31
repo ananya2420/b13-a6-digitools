@@ -3,7 +3,7 @@ import shoppingCart from "../../assets/products/shopping-cart.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-md px-4">
+    <div className="navbar bg-base-100 shadow-md px-4 mx-auto">
       
     
       <div className="navbar-start">

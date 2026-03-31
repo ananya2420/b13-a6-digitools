@@ -8,7 +8,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "📝"
+    "premiumImg": "group-7.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Drag & drop editor", "1500+ templates", "Social media export"],
-    "icon": "🎨"
+    "premiumImg": "group-8.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["1TB storage", "Automatic backup", "Shareable links"],
-    "icon": "☁️ "
+    "premiumImg": "group-9.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Email templates", "Analytics dashboard", "Lead scoring"],
-    "icon": "📧"
+    "premiumImg": "group-10.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["Gantt charts", "Team collaboration", "Task automation"],
-    "icon": "📊"
+    "premiumImg": "group-11.png"
   },
   {
     "id": 6,
@@ -63,6 +63,6 @@
     "tag": "new",
     "tagType": "new",
     "features": ["Video hosting", "Quizzes & assignments", "Certificates"],
-    "icon": "🎓"
+    "premiumImg": "group-12.png"
   }
 ]

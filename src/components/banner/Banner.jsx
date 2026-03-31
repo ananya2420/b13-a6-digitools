@@ -4,7 +4,7 @@ import bannerImg from "../../assets/banner.png";
 import Rectangle4 from "../../assets/products/Rectangle 4.png"
 const Banner = () => {
   return (
-    <div className="bg-base-100 py-16 px-6 lg:px-20">
+    <div className="bg-base-100 py-16 px-6 lg:px-20 mx-auto">
       
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
         
