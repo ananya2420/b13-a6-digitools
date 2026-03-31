@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Pro Resume Builder",
+    "description": "Create professional resumes in minutes with ATS-friendly templates.",
+    "price": 29.99,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "📝"
+  },
+  {
+    "id": 2,
+    "name": "Design Studio Pro",
+    "description": "Powerful design tools to create stunning graphics and social media posts.",
+    "price": 15.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Drag & drop editor", "1500+ templates", "Social media export"],
+    "icon": "🎨"
+  },
+  {
+    "id": 3,
+    "name": "Cloud Storage Plus",
+    "description": "Secure cloud storage for all your files with seamless syncing.",
+    "price": 99.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["1TB storage", "Automatic backup", "Shareable links"],
+    "icon": "☁️"
+  },
+  {
+    "id": 4,
+    "name": "Marketing Automation",
+    "description": "Automate your email campaigns and track customer engagement.",
+    "price": 49.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Email templates", "Analytics dashboard", "Lead scoring"],
+    "icon": "📧"
+  },
+  {
+    "id": 5,
+    "name": "Project Manager Pro",
+    "description": "Manage projects efficiently with timelines, tasks, and collaboration.",
+    "price": 199.99,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Gantt charts", "Team collaboration", "Task automation"],
+    "icon": "📊"
+  },
+  {
+    "id": 6,
+    "name": "Online Course Builder",
+    "description": "Create and sell online courses with ease and track student progress.",
+    "price": 79.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Video hosting", "Quizzes & assignments", "Certificates"],
+    "icon": "🎓"
+  }
+]
