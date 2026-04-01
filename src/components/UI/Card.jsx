@@ -6,6 +6,7 @@ import group10 from "../../assets/products/Group 10.png";
 import group11 from "../../assets/products/Group 11.png";
 import group12 from "../../assets/products/Group 12.png";
 import { FaCheck } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const imageMap = {
   "group-7.png": group7,
@@ -23,15 +24,15 @@ export const Card = ({ premium,setCart,cart, setSelectedPremiums,selectedPremium
 
   console.log(premium.price);
 
-  const handleChoosePremium = () =>{
-    
-    setIsSelected(true);
+ const handleChoosePremium = () => {
+  setIsSelected(true);
 
-    setCart(prev => [...prev, premium.price]); 
+  setCart(prev => [...prev, premium.price]);
 
-    setSelectedPremiums([...selectedPremiums,premium])
-  }
-  
+  setSelectedPremiums(prev => [...prev, premium]);
+
+  toast.success(`${premium.name} is selected`);
+};
 
   return (
     <div className="card bg-base-100 shadow-md">

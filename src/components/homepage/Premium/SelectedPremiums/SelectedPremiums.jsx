@@ -1,36 +1,50 @@
 import React from 'react';
-import { MdDelete } from "react-icons/md";
-export const SelectedPremiums = ({ selectedPremiums,setSelectedPremiums,setCart,cart }) => {
-  console.log(selectedPremiums, 'selectedPremiums');
+import { SelectedCard } from '../../../UI/SelectedCard/SelectedCard';
+import ShoppingCart from "../../../../assets/products/shopping-cart.png"
 
-  const handleDeleteSelectedPremiums=(premium)=>{
-    console.log(selectedPremiums,"selectedPremium");
+export const SelectedPremiums = ({ selectedPremiums, setSelectedPremiums, setCart }) => {
 
-    const filteredPremiums=selectedPremiums.filter(premium=>premium.name !==premium.name);
-    console.log(filteredPremiums,"filteredPremiums");
+ 
+  const handleDeleteSelectedPremiums = (premium) => {
+    const filteredPremiums = selectedPremiums.filter(item => item.id !== premium.id);
     setSelectedPremiums(filteredPremiums);
-    setCart(cart+premium.price)
-  }
+    setCart(filteredPremiums); 
+  };
+
+  
+  const total = selectedPremiums.reduce((sum, item) => sum + item.price, 0);
+
   return (
-    <div>
-        <div className='space-y-5'>
-      {selectedPremiums.map((premium, index) => {
-        return <div key={index}>
-          <div>
-            <img src={`/assets/${premium.premiumImg}`} alt={premium.name} className="h-[100px] w-auto rounded-md"/>
-            <div>
-            <h2 className='flex items-center gap-2 font-semibold text-2xl'>{premium.name}</h2> 
-             <p>{premium.price}</p>
-                </div>
-          </div>
-        
-         <button onClick={()=>handleDeleteSelectedPremiums(premium)}>
-            
-            <MdDelete />
-            </button>
+    <div className="space-y-5">
+
+      {selectedPremiums.length === 0 ? (
+        <div className="flex flex-col items-center justify-center gap-4">
+          <img src={ShoppingCart} alt="" className="h-40" />
+          <p>Your cart is empty</p>
         </div>
-      })}
-    </div>
+      ) : (
+        <>
+          {selectedPremiums.map(premium => (
+            <SelectedCard
+              key={premium.id}
+              premium={premium}
+              handleDeleteSelectedPremiums={handleDeleteSelectedPremiums}
+            />
+          ))}
+
+         
+          <div className="flex justify-between mt-6 p-4 bg-gray-100 rounded-xl shadow">
+            <h2 className="text-xl font-semibold">Total: ${total.toFixed(2)}</h2>
+            <button
+              onClick={() => { setSelectedPremiums([]); setCart([]); }}
+              className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl"
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </>
+      )}
+
     </div>
   );
 };
