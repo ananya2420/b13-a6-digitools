@@ -34,13 +34,16 @@ export const SelectedPremiums = ({ selectedPremiums, setSelectedPremiums, setCar
 
          
           <div className="flex justify-between mt-6 p-4 bg-gray-100 rounded-xl shadow">
-            <h2 className="text-xl font-semibold">Total: ${total.toFixed(2)}</h2>
+           <span className="text-xl font-semibold">Total:</span>
+           <span className="text-xl font-semibold">${total.toFixed(2)}</span>
+         </div>
+          <div>
             <button
-              onClick={() => { setSelectedPremiums([]); setCart([]); }}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl"
-            >
-              Proceed to Checkout
-            </button>
+            onClick={() => { setSelectedPremiums([]); setCart([]); }}
+            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl w-full text-center"
+>
+            Proceed to Checkout
+        </button>
           </div>
         </>
       )}

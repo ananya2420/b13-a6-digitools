@@ -18,11 +18,10 @@ const fetchPremium = async () => {
 function App() {
   const premiumPromise = fetchPremium()
 
-  // ✅ cart as array of premium objects
+
   const [cart, setCart] = useState([])
 
-  // total price
-  const total = cart.reduce((sum, item) => sum + item.price, 0)
+ 
 
   // remove item
   const handleDeleteSelectedPremiums = (premium) => {
@@ -30,11 +29,7 @@ function App() {
     toast(`${premium.name} removed`)
   }
 
-  // checkout
-  const handleCheckout = () => {
-    setCart([])
-    toast.success("Checkout successful")
-  }
+ 
 
   return (
     <>
@@ -50,22 +45,7 @@ function App() {
         />
       </Suspense>
 
-      {/* Cart Section */}
-      {cart.length > 0 && (
-        <div className="mt-6 flex justify-end gap-4 items-center px-6">
-          <div className="p-4 bg-gray-800 text-white rounded-xl shadow">
-            <h2 className="text-xl font-semibold">
-              Total: ${total.toFixed(2)}
-            </h2>
-          </div>
-          <button
-            onClick={handleCheckout}
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition"
-          >
-            Proceed to Checkout
-          </button>
-        </div>
-      )}
+     
 
       <StepsSection />
       <PricingSection />

@@ -3,7 +3,7 @@ import { AvailablePremiums } from './AvailablePremiums/AvailablePremiums';
 import { SelectedPremiums } from './SelectedPremiums/SelectedPremiums';
 
 export const Premium = ({ premiumPromise, setCart, cart }) => {
-  const premiums = use(premiumPromise); // React Suspense
+  const premiums = use(premiumPromise); 
 
   const [selectedType, setSelectedType] = useState("available");
   const [selectedPremiums, setSelectedPremiums] = useState([]);
@@ -81,17 +81,7 @@ export const Premium = ({ premiumPromise, setCart, cart }) => {
             cart={cart}
           />
 
-          {/* Total + Checkout */}
-          {selectedPremiums.length > 0 && (
-            <div className="mt-6 flex justify-end gap-4 items-center px-6">
-              <div className="p-4 bg-gray-800 text-white rounded-xl shadow">
-                <h2 className="text-xl font-semibold">
-                  Total: ${total.toFixed(2)}
-                </h2>
-              </div>
-             
-            </div>
-          )}
+         
         </div>
       )}
     </div>

@@ -67,11 +67,11 @@ export const Card = ({ premium,setCart,cart, setSelectedPremiums,selectedPremium
 
         {/* Button */}
       <button
-  className="btn"
+  className={`btn ${isSelected ? 'bg-green-500 text-white cursor-not-allowed' : 'bg-purple-500 text-white'} `}
   onClick={handleChoosePremium}
   disabled={isSelected}
 >
-  {isSelected ? "Added to cart" : "Buy now"}
+  {isSelected ? "Added to cart!" : "Buy now"}
 </button>
       </div>
     </div>
