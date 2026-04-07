@@ -7,7 +7,7 @@ A modern and responsive e-commerce UI built with React.js. This project allows u
 ---
 
 ## 🌐 Live Site
-👉 https://your-live-link.com
+👉 https:https://neon-croissant-a67b3b.netlify.app/
 
 ---
 
